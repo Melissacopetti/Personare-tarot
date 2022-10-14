@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { imageBackCard } from './baseUrlImg';
 import Header from './Header/Header';
 import { cards } from './listaCards';
 import { AllCard, CardBack, CardFront, ContainerCard, ImgCard } from './styled';
+import { Easings } from 'react-stonecutter';
 
 const TelaPrincipal = () => {
   const [data, setData] = useState(generateData())
@@ -11,10 +12,17 @@ const TelaPrincipal = () => {
   const [stiffess, setStiffness]= useState(60)
   const [columns, setColumns]= useState(6)
   const [gutters, setGutters]= useState(13)
-  const [easing, setEasing]= useState({easings.cubicOut})
+  const [easing, setEasing]= useState({Easings})
+ 
+  
 
 
-
+const SliderWithTooltip = setSliderWithTooltip(Slider);
+    const cartas = cards;
+generateData = () => shuffle(cartas);
+    const minItems = (78)
+        .slice(0, minItems + Math.floor(Math.random() * (26 - minItems)))
+        .sort();
 
 
     const items = cards.map((card) => {
