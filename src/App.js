@@ -1,6 +1,7 @@
 import React from 'react'
-import { cards } from './Components/listaCards';
-import TelaPrincipal from './Components/TelaPrincipal';
+import TelaPrincipal from './Components/TelaPrincipal/TelaPrincipal'
+
+
 
 const App = () => {
 
