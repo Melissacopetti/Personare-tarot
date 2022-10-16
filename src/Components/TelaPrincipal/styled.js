@@ -7,6 +7,11 @@ export const ContainerCard = styled.div`
   grid-column-gap: 15px;
   grid-row-gap: 15px;
   /* border: red solid 3px; */
+  span:first-child {
+  display: inline-block;
+  min-width: 70px;
+  text-align: left;
+}
 `;
 
 export const AllCard = styled.div`

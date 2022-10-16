@@ -1,40 +1,50 @@
-import React, { useState } from "react";
+// import shuffle from "lodash.shuffle";
+import React from "react";
 import Header1 from "../../assets/Header1.png";
-import { cards } from "../listaCards";
+
+// import { cards } from "../listaCards";
 import { BoxButton, Button, ImgBorder } from "./headerStyle";
 
-import { Slider } from "@material-ui/core";
-
-
 const Header = () => {
-  const [handleShuffle, setHandleShuffle] = useState([cards]);
+  // const { states } = useContext(GlobalStateContext);
+  // const [cardSide, setCardSide] = useState([true]);
+//   const [ setName] = useState("");
+//   const [ setImage] = useState("");
+// const [ setSide] = useState(true)
 
-  const [data, setData] = useState(generateData());
- 
-  handleShuffle = () => {
-    setHandleShuffle({
-        data: generateData(),
-    });
-};
-const cardPosition = cards.map((item, index) => {
-  <p key={index}>{item}</p>;
-});
+//   const blendCards = () => {
+//     setCardSide(!cardSide);
+//   };
+//   const [ setHandleShuffle] = useState([cards]);
 
-const SliderWithTooltip = setSliderWithTooltip(Slider);
-  const cartas = cards;
-  generateData = () => shuffle(cardPosition);
-  const minItems = (78)
-    .slice(0, minItems + Math.floor(Math.random() * (26 - minItems)))
-    .sort();
+//  const shuffleHandle =  () => {
+//     setHandleShuffle({
+//       data: generateData(),
+//     });
+//   };
+
+  // const cardPosition = cards.map((item, index) => {
+  //   return <p key={index}>{index}</p>;
+  // });
+  // let minItems = 10;
+  // const generateData = (min, max) =>
+  //   shuffle(cardPosition)
+  //     .slice(
+  //       0,
+  //       minItems + Math.floor(Math.random() * (78 - minItems)),
+  //       // setName(states.tarot.cards.name),
+  //       // setImage(states.tarot.cards.image),
+  //       // setSide(!false)
+  //     )
+  //     .sort();
 
   return (
     <header>
       <div>
         <ImgBorder src={Header1} />
         <BoxButton>
-     
-          <Button  onClick={() => setHandleShuffle}>Embaralhar </Button>
-          <Button>Significado</Button>
+          <Button >Embaralhar </Button>
+          <Button>Reiniciar</Button>
         </BoxButton>
       </div>
     </header>

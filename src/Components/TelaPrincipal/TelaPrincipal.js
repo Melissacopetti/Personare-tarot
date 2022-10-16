@@ -3,51 +3,61 @@ import { imageBackCard } from "../baseUrlImg";
 import Header from "../Header/Header";
 import { cards } from "../listaCards";
 import { AllCard, CardBack, CardFront, ContainerCard, ImgCard } from "./styled";
-import Grid from "./Grid";
-import { layout } from "react-stonecutter";
+// import { SpringGrid } from "react-stonecutter";
+import Swal from "sweetalert2";
+
 
 const TelaPrincipal = () => {
-    const { data, ...gridProps } = this.state;
+  // const { states, cardFront, setLayout, responsive, columns } =
+  //   useContext(GlobalStateContext);
+  // const [side] = useState(false);
+  // const tarot = states.tarot;
+  // let Grid = SpringGrid;
 
-  const cardPosition = cards.map((item, index) => {
-    <p key={index}>{item}</p>;
-  });
-
-  const layouts = ["Simple"];
-  const enterExitStyles = ["Newspaper"];
-
-  
   const items = cards.map((card) => {
-    const contentIndex = cardPosition(0) % 6;
-    const content = { card }(contentIndex, Math.floor(contentIndex * 1.5) + 1);
-
+        const title = card.name;
+        const text = card.meaning;
     return (
-      <div>
-        <AllCard key={card.name}>
-          <CardFront>
-            <ImgCard src={imageBackCard} />
-          </CardFront>
-          <CardBack>
-            <ImgCard src={card.image} />
-            <h3>{card.name.toUpperCase()}</h3>
-            {content.map((p, i) => {
-              <p key={i}>{p}</p>;
-            })}
-          </CardBack>
-        </AllCard>
-      </div>
-    );
-  });
+          <div>
+            <AllCard key={card.name}>
+               
+                <CardFront>
+                  <ImgCard src={imageBackCard} />
+                </CardFront>
+            
+                <CardBack>
+                  <ImgCard  src={ card.image} />
+                  <h3 onClick={
+                    Swal.fire({
+                      title: title,
+                      text: text,
+                      showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                      },
+                      hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                      }
+                    })} 
+                  >{card.name.toUpperCase()}</h3>
+                </CardBack>
+            
+            </AllCard>
+          </div>
+        );
+      })
+   
+
   return (
     <div>
       <Header />
-      <Grid
-       
-        measured={layout !== "simple"}
-        {...gridProps}
-      >
+      {/* <Grid
+        // columns={!responsive ? columns : null}
+        // columnWidth={150}
+        // easing={easings.cubicOut}
+        // measured={setLayout === "simple"}
+      > */}
         <ContainerCard>{items}</ContainerCard>
-      </Grid>
+    
     </div>
   );
 };
