@@ -26,3 +26,10 @@ export const Button = styled.button`
   cursor: pointer;
   background: none;
 `;
+
+export const Description = styled.h2`
+color:pink;
+border:#d49c6c 9px double;
+text-align:center;
+padding:10px;
+`

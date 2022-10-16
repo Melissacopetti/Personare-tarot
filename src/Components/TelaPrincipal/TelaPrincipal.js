@@ -2,10 +2,16 @@ import React from "react";
 import { imageBackCard } from "../baseUrlImg";
 import Header from "../Header/Header";
 import { cards } from "../listaCards";
-import { AllCard, CardBack, CardFront, ContainerCard, ImgCard } from "./styled";
+import {
+  AllCard,
+  ButtonCard,
+  CardBack,
+  CardFront,
+  ContainerCard,
+  ImgCard,
+} from "./styled";
 // import { SpringGrid } from "react-stonecutter";
 import Swal from "sweetalert2";
-
 
 const TelaPrincipal = () => {
   // const { states, cardFront, setLayout, responsive, columns } =
@@ -15,37 +21,44 @@ const TelaPrincipal = () => {
   // let Grid = SpringGrid;
 
   const items = cards.map((card) => {
-        const title = card.name;
-        const text = card.meaning;
+    const title = card.name;
+    const text = card.meaning;
+    const img = card.image;
+
+    const AlertCard = () => {
+      Swal.fire({
+        title: title,
+        text: text,
+      
+        color: "white",
+        imageUrl: img,
+        imageWidth: 200,
+        imageHeight: 300,
+        imageAlt: "tarot card",
+        width: 1000,
+        height: 900,
+
+        background: "black",
+      });
+    };
+
     return (
-          <div>
-            <AllCard key={card.name}>
-               
-                <CardFront>
-                  <ImgCard src={imageBackCard} />
-                </CardFront>
-            
-                <CardBack>
-                  <ImgCard  src={ card.image} />
-                  <h3 onClick={
-                    Swal.fire({
-                      title: title,
-                      text: text,
-                      showClass: {
-                        popup: 'animate__animated animate__fadeInDown'
-                      },
-                      hideClass: {
-                        popup: 'animate__animated animate__fadeOutUp'
-                      }
-                    })} 
-                  >{card.name.toUpperCase()}</h3>
-                </CardBack>
-            
-            </AllCard>
-          </div>
-        );
-      })
-   
+      <div>
+        <AllCard key={card.name}>
+          <CardFront>
+            <ImgCard src={imageBackCard} />
+          </CardFront>
+
+          <CardBack>
+            <ImgCard src={card.image} />
+            <ButtonCard onClick={AlertCard}>
+              {card.name.toUpperCase()}
+            </ButtonCard>
+          </CardBack>
+        </AllCard>
+      </div>
+    );
+  });
 
   return (
     <div>
@@ -56,8 +69,7 @@ const TelaPrincipal = () => {
         // easing={easings.cubicOut}
         // measured={setLayout === "simple"}
       > */}
-        <ContainerCard>{items}</ContainerCard>
-    
+      <ContainerCard>{items}</ContainerCard>
     </div>
   );
 };

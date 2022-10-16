@@ -1,9 +1,10 @@
 // import shuffle from "lodash.shuffle";
+
 import React from "react";
 import Header1 from "../../assets/Header1.png";
 
 // import { cards } from "../listaCards";
-import { BoxButton, Button, ImgBorder } from "./headerStyle";
+import { BoxButton, Button, Description, ImgBorder } from "./headerStyle";
 
 const Header = () => {
   // const { states } = useContext(GlobalStateContext);
@@ -46,6 +47,7 @@ const Header = () => {
           <Button >Embaralhar </Button>
           <Button>Reiniciar</Button>
         </BoxButton>
+        <Description>Vamos tirar a sorte? Para jogar, clique em embaralhar. Passe o cursor pela carta escolhida e depois clique em seu nome, então terá seu significado. Não esqueça: as cartas nunca mentem!</Description>
       </div>
     </header>
   );

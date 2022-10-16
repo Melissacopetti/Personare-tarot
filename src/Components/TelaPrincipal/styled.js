@@ -21,7 +21,8 @@ export const AllCard = styled.div`
   transition: transform 1s;
   transform-style: preserve-3d;
   text-align: center;
-  :active {
+  :hover {
+
     transform: rotateY(180deg);
   }
 `;
@@ -48,3 +49,12 @@ export const CardBack = styled.div`
   height: 38vh;
   backface-visibility: hidden;
 `;
+
+export const ButtonCard = styled.button`
+font-family: "Macondo", cursive;
+ border: none;
+ color:white;
+ background:none;
+ font-size:medium;
+ cursor: pointer;
+`
