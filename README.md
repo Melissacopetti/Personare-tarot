@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+## Tarot - Personare 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Beginners-guide-to-tarot-part-2-BP-56e6](https://user-images.githubusercontent.com/104647493/196074681-80de1fe6-d84c-4333-959f-1e4aeceee4e6.gif)
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h1 align="center">:crystal_ball: Projeto Personare - Case-Front-end - Turma Alves - Labenu :crystal_ball: </h1>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##  Índice 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [Descrição](#descrição)
+* [Principais Ferramentas Utilizadas](#principais-ferramentas-utilizadas)
+* [Funcionalidades](#funcionalidades)
+* [Link do Projeto](#link-do-projeto)
+* [Imagens do Projeto](#imagens-do-projeto)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+💬
+## Descrição 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Projeto desenvolvido para avaliação final do bootcamp de web Full-stack da Labenu. Este Case tem como objetivo a criação de uma aplicação de sorteio de cartas de tarot, com significado apresentado ao usuário após escolher a carta, devidamente embaralhada. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+⚙️
+## Principais Ferramentas Utilizadas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+▪ React Hooks
+▪ Styled-components
+▪ SweetAlert2
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Funcionalidades
+<div align='justify'>
+O site apresenta ima lista com 78 cartas de tarot com a face oculta, ao parar o cursor sobre a carta o usuário pode desvendar sua face e, cliando no nome da carta, lhe é exibido um pop-up com a imagem e breve descrição do significado místico da carta. Ao clicar 'ok', o usuário pode escolher outra carta.
+                  </div>
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+🔗
+## Link do Projeto 
+[Tarot-Personare](tarot-personare.surge.sh)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Imagens do Projeto
+![Captura de tela 2022-10-16 233444](https://user-images.githubusercontent.com/104647493/196077683-b62af636-ca57-443f-a544-7a9d39326b71.png)
+![Animação0](https://user-images.githubusercontent.com/104647493/196079266-53801781-a937-4bc4-9a2e-b8963a7a70a6.gif)
