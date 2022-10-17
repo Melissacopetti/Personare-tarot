@@ -10,15 +10,12 @@ import {
   ContainerCard,
   ImgCard,
 } from "./styled";
-// import { SpringGrid } from "react-stonecutter";
 import Swal from "sweetalert2";
+import FlipMove from "react-flip-move";
+
 
 const TelaPrincipal = () => {
-  // const { states, cardFront, setLayout, responsive, columns } =
-  //   useContext(GlobalStateContext);
-  // const [side] = useState(false);
-  // const tarot = states.tarot;
-  // let Grid = SpringGrid;
+ 
 
   const items = cards.map((card) => {
     const title = card.name;
@@ -29,7 +26,6 @@ const TelaPrincipal = () => {
       Swal.fire({
         title: title,
         text: text,
-      
         color: "white",
         imageUrl: img,
         imageWidth: 200,
@@ -37,13 +33,13 @@ const TelaPrincipal = () => {
         imageAlt: "tarot card",
         width: 1000,
         height: 900,
-
         background: "black",
       });
     };
 
     return (
       <div>
+        <FlipMove duration={550} easing="ease">
         <AllCard key={card.name}>
           <CardFront>
             <ImgCard src={imageBackCard} />
@@ -56,19 +52,16 @@ const TelaPrincipal = () => {
             </ButtonCard>
           </CardBack>
         </AllCard>
-      </div>
+     </FlipMove> 
+    
+     </div>
     );
   });
 
   return (
     <div>
       <Header />
-      {/* <Grid
-        // columns={!responsive ? columns : null}
-        // columnWidth={150}
-        // easing={easings.cubicOut}
-        // measured={setLayout === "simple"}
-      > */}
+    
       <ContainerCard>{items}</ContainerCard>
     </div>
   );

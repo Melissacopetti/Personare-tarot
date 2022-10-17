@@ -11,9 +11,7 @@ export const BoxButton = styled.div`
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
 `;
 export const Button = styled.button`
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
+  
   font-family: "Macondo", cursive;
   border: none;
   font-size: 4vw;
@@ -23,8 +21,14 @@ export const Button = styled.button`
   margin-right: 17vw;
   margin-top: -150px;
   color: #d49c6c;
-  cursor: pointer;
+cursor: pointer;
   background: none;
+  :hover{
+    margin-top:50px;
+  }
+  :active{
+color:white;
+  }
 `;
 
 export const Description = styled.h2`
