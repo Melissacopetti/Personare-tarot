@@ -1,6 +1,6 @@
 import {BASE_URL} from './baseUrlImg';
 
-export const cards = [
+export const cardsJson = [
     {
         name: 'O MAGO',
         image: `${BASE_URL}/arcano1.jpg`,

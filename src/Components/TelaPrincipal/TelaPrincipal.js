@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { imageBackCard } from "../baseUrlImg";
 import Header from "../Header/Header";
-import { cards } from "../listaCards";
+import { cardsJson } from "../listaCards";
 import {
   AllCard,
   ButtonCard,
@@ -13,9 +13,18 @@ import {
 import Swal from "sweetalert2";
 import FlipMove from "react-flip-move";
 
-
 const TelaPrincipal = () => {
+  const [cards, setCards] = useState(cardsJson);
+         
  
+  const shuffle = () => {
+    const newCards = [...cards];
+    for (let i = newCards.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newCards[i], newCards[j]] = [newCards[j], newCards[i]];
+    }
+    setCards(newCards);
+  };
 
   const items = cards.map((card) => {
     const title = card.name;
@@ -40,28 +49,28 @@ const TelaPrincipal = () => {
     return (
       <div>
         <FlipMove duration={550} easing="ease">
-        <AllCard key={card.name}>
-          <CardFront>
-            <ImgCard src={imageBackCard} />
-          </CardFront>
+          <AllCard key={card.name}>
+            <CardFront>
+              <ImgCard src={imageBackCard} />
+            </CardFront>
 
-          <CardBack>
-            <ImgCard src={card.image} />
-            <ButtonCard onClick={AlertCard}>
-              {card.name.toUpperCase()}
-            </ButtonCard>
-          </CardBack>
-        </AllCard>
-     </FlipMove> 
-    
-     </div>
+            <CardBack>
+              <ImgCard src={card.image} />
+              <ButtonCard onClick={AlertCard}>
+                {card.name.toUpperCase()}
+              </ButtonCard>
+            </CardBack>
+          </AllCard>
+        </FlipMove>
+      </div>
     );
   });
 
   return (
     <div>
-      <Header />
-    
+      <Header shuffle={shuffle}
+      cards={cards} />
+
       <ContainerCard>{items}</ContainerCard>
     </div>
   );
