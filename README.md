@@ -39,13 +39,13 @@ Projeto desenvolvido para avaliação final do bootcamp de web Full-stack da Lab
 
 ## Funcionalidades
 <div align='justify'>
-O site apresenta ima lista com 78 cartas de tarot com a face oculta, ao parar o cursor sobre a carta o usuário pode desvendar sua face e, cliando no nome da carta, lhe é exibido um pop-up com a imagem e breve descrição do significado místico da carta. Ao clicar 'ok', o usuário pode escolher outra carta.
+O site apresenta ima lista com 78 cartas de tarot com a face oculta, ao parar o cursor sobre a carta o usuário pode desvendar sua face e, cliando no nome da carta, lhe é exibido um pop-up com a imagem e breve descrição do significado místico da carta. Ao clicar 'ok', o usuário pode escolher outra carta. Possui dois botões, sendo que um tem a funcionalidade de embaralhar as cartas e outro tem a funcionalidade de reiniciar, colocando todas as cartas novamente em ordem.
                   </div>
 
 
 🔗
 ## Link do Projeto 
-[Tarot-Personare](tarot-personare.surge.sh)
+[Tarot-Personare](https://tarot-personare.surge.sh/)
 
 
 
