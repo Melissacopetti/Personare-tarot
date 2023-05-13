@@ -45,7 +45,7 @@ O site apresenta ima lista com 78 cartas de tarot com a face oculta, ao parar o 
 
 🔗
 ## Link do Projeto 
-[Tarot-Personare](personare-tarot.surge.sh)
+[Tarot-Personare](http://personare-tarot.surge.sh/)
 
 
 
